@@ -58,8 +58,11 @@ module.exports = function(RED) {
                         var terminationTimeout = msg.hasOwnProperty("terminationTimout") ? msg.terminationTimout : node.terminationTimeout;
 
                         var new_msg = {
-                            topic: apiCall,
-                            payload: ""
+                            'topic': apiCall,
+                            'homeId': = msg.hasOwnProperty("homeId") ? msg.homeId : node.homeId,
+                            'deviceId': msg.hasOwnProperty("deviceId") ? msg.deviceId : node.deviceId,
+                            'zoneId': msg.hasOwnProperty("zoneId") ? msg.zoneId : node.zoneId,
+                            'payload': ""
                         };
 
                         switch(apiCall) {
