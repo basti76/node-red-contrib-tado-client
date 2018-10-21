@@ -59,7 +59,7 @@ module.exports = function(RED) {
 
                         var new_msg = {
                             'topic': apiCall,
-                            'homeId': = msg.hasOwnProperty("homeId") ? msg.homeId : node.homeId,
+                            'homeId': msg.hasOwnProperty("homeId") ? msg.homeId : node.homeId,
                             'deviceId': msg.hasOwnProperty("deviceId") ? msg.deviceId : node.deviceId,
                             'zoneId': msg.hasOwnProperty("zoneId") ? msg.zoneId : node.zoneId,
                             'payload': ""
